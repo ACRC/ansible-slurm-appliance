@@ -176,6 +176,7 @@ builder
 
 [extra_packages:children]
 # Hosts to install specified additional packages on
+fatimage
 builder
 
 [dnf_repos:children]
