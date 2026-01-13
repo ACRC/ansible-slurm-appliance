@@ -8,10 +8,7 @@ PasswordAuthentication no
 # but this is overridden so installations will only check .ssh/authorized_keys
 AuthorizedKeysFile none
 
-AllowGroups bc5usrs bc5adms root adm
-
-Match User root
-  AuthorizedKeysFile .ssh/authorized_keys
+AllowGroups bc5usrs bc5adms adm
 
 Match User rocky
   AuthorizedKeysFile .ssh/authorized_keys
