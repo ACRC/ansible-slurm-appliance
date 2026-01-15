@@ -236,4 +236,7 @@ doca
 [fatimage]
 # Add build VM into this group to enable all features with this as child
 
+[mounts]
+# Hosts with custom mounts
+
 [openportal]

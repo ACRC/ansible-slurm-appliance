@@ -219,5 +219,10 @@ compute
 # Add `builder` to configure image for software raid
 fatimage
 
+[mounts:children]
+# Hosts with custom mounts
+login
+compute
+
 [openportal:children]
 login
