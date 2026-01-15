@@ -68,7 +68,7 @@ openportal_services:
           ip_range: "127.0.0.1/32"
           key: "{{ openportal_keys.op_dl_clusters_bc5_to_op_dl_clusters_bc5_slurm }}"
   - name: "op-dl-clusters-bc5-filesystem"
-    binary: "/usr/bin/op-filesystem"
+    binary: "/usr/local/bin/op-filesystem"
     config:
       agent: "Filesystem"
       name: "filesystem"
