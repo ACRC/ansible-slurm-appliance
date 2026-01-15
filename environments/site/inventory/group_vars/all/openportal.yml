@@ -6,7 +6,7 @@ openportal_freeipa_password: "{{ vault_openportal_freeipa_password }}"
 
 openportal_services:
   - name: "op-dl"
-    binary: "/usr/bin/op-provider"
+    binary: "/usr/local/bin/op-provider"
     config:
       agent: "Provider"
       name: "dl"
