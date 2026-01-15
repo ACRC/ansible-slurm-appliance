@@ -42,7 +42,7 @@ openportal_services:
           ip_range: "127.0.0.1/32"
           key: "{{ openportal_keys.op_dl_clusters_to_op_dl_clusters_bc5 }}"
   - name: "op-dl-clusters-bc5"
-    binary: "/usr/bin/op-cluster"
+    binary: "/usr/local/bin/op-cluster"
     config:
       agent: "Instance"
       name: "bc5"
