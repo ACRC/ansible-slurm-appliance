@@ -110,7 +110,7 @@ openportal_services:
         # is charged as 2 node hours
         slurm-default-node: '{ "cpus": 32, "mem": 214199}'
   - name: "op-dl-freeipa"
-    binary: "/usr/bin/op-freeipa"
+    binary: "/usr/local/bin/op-freeipa"
     extra: 'Environment="OPENPORTAL_ALLOW_INVALID_SSL_CERTS=true"'
     config:
       agent: "Account"
