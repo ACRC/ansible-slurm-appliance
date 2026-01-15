@@ -87,7 +87,7 @@ openportal_services:
         project-roots: "/projects/:/projects/public"
         project-permissions: "2770:2775"
   - name: "op-dl-clusters-bc5-slurm"
-    binary: "/usr/bin/op-slurm"
+    binary: "/usr/local/bin/op-slurm"
     config:
       agent: "Scheduler"
       name: "slurm"
