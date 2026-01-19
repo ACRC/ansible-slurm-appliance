@@ -1,8 +1,8 @@
 name: Cleanup CI clusters
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 21 * * *'  # Run at 9PM - image sync runs at midnight
+  #schedule:
+  #  - cron: '0 21 * * *'  # Run at 9PM - image sync runs at midnight
 
 permissions:
   contents: read
