@@ -53,6 +53,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-compute2 = {
@@ -82,6 +83,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-compute3 = {
@@ -111,6 +113,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-compute4 = {
@@ -140,6 +143,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-compute5 = {
@@ -169,6 +173,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-compute6 = {
@@ -197,6 +202,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute9 = {
@@ -230,6 +236,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute10 = {
@@ -263,6 +270,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute11 = {
@@ -296,6 +304,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute12 = {
@@ -329,6 +338,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute13 = {
@@ -362,6 +372,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
 #      general-gen2-compute14 = {
@@ -395,6 +406,7 @@ module "cluster" {
 #            "manila",
 #            "basic_users",
 #            "eessi",
+#            "sssd",
 #          ]
 #      }
       general-gen2-compute15 = {
@@ -428,6 +440,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute16 = {
@@ -461,6 +474,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute17 = {
@@ -494,6 +508,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute18 = {
@@ -527,6 +542,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute19 = {
@@ -560,6 +576,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute20 = {
@@ -593,6 +610,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute21 = {
@@ -626,6 +644,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute22 = {
@@ -659,6 +678,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute23 = {
@@ -692,6 +712,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute24 = {
@@ -725,6 +746,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute25 = {
@@ -758,6 +780,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute26 = {
@@ -791,6 +814,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute27 = {
@@ -824,6 +848,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       # general-gen2-compute28 = {
@@ -857,6 +882,7 @@ module "cluster" {
       #       "manila",
       #       "basic_users",
       #       "eessi",
+      #       "sssd",
       #     ]
       # }
       general-gen2-compute29 = {
@@ -890,6 +916,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute30 = {
@@ -923,6 +950,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute31 = {
@@ -956,6 +984,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute32 = {
@@ -989,6 +1018,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute33 = {
@@ -1022,6 +1052,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute34 = {
@@ -1055,6 +1086,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute35 = {
@@ -1088,6 +1120,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute36 = {
@@ -1121,6 +1154,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute37 = {
@@ -1154,6 +1188,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
       general-gen2-compute38 = {
@@ -1187,6 +1222,7 @@ module "cluster" {
             "manila",
             "basic_users",
             "eessi",
+            "sssd",
           ]
       }
      gpu-gpu1 = {
@@ -1210,6 +1246,7 @@ module "cluster" {
            "manila",
            "basic_users",
            "eessi",
+           "sssd",
          ]
      }
      gpu-gpu2 = {
@@ -1233,6 +1270,7 @@ module "cluster" {
            "manila",
            "basic_users",
            "eessi",
+           "sssd",
          ]
      }
      highmem-compute7 = {
@@ -1256,6 +1294,7 @@ module "cluster" {
            "manila",
            "basic_users",
            "eessi",
+           "sssd",
          ]
      }
      highmem-compute8 = {
@@ -1279,6 +1318,7 @@ module "cluster" {
            "manila",
            "basic_users",
            "eessi",
+           "sssd",
          ]
      }
     }
