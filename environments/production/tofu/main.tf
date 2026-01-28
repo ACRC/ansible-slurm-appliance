@@ -406,6 +406,7 @@ module "cluster" {
 #            "manila",
 #            "basic_users",
 #            "eessi",
+#            "sssd",
 #          ]
 #      }
       general-gen2-compute15 = {
@@ -881,6 +882,7 @@ module "cluster" {
       #       "manila",
       #       "basic_users",
       #       "eessi",
+      #       "sssd",
       #     ]
       # }
       general-gen2-compute29 = {
