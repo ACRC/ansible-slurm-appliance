@@ -50,7 +50,7 @@ openportal_services:
       ip: "127.0.0.1"
       port: 8071
       servers:
-        - name: "cluster"
+        - name: "clusters"
           url: "ws://localhost:8082"
           zone: "dl"
           key: "{{ openportal_keys.op_dl_clusters_to_op_dl_clusters_bc5 }}"
@@ -108,7 +108,7 @@ openportal_services:
         # These numbers are chosen so that using all of a "normal" node is
         # charged as 1 node hour, while using all of the "high memory" node
         # is charged as 2 node hours
-        slurm-default-node: '{ "cpus": 32, "mem": 214199}'
+        slurm-default-node: '{ \"cpus\": 32, \"mem\": 214199}'
   - name: "op-dl-freeipa"
     binary: "/usr/local/bin/op-freeipa"
     extra: 'Environment="OPENPORTAL_ALLOW_INVALID_SSL_CERTS=true"'
@@ -128,4 +128,5 @@ openportal_services:
         freeipa-password: "{{ openportal_freeipa_password }}"
         instance-groups: "bc5@dl-clusters-bc5:bc5usrs"
         freeipa-server: "https://dl-auth.acrc.bris.ac.uk"
-
+      custom: |
+        [service.encryption.Simple]

@@ -5,6 +5,12 @@ name = "{{ openportal_service.config.name }}"
 url = "ws://{{ openportal_service.config.hostname }}:{{ openportal_service.config.port }}/"
 ip = "{{ openportal_service.config.ip }}"
 port = {{ openportal_service.config.port }}
+{% if openportal_service.config.servers is undefined %}
+servers = []
+{% endif %}
+{% if openportal_service.config.clients is undefined %}
+clients = []
+{% endif %}
 
 {% if openportal_service.config.servers is defined %}
 {% for server in openportal_service.config.servers %}
@@ -19,8 +25,6 @@ data = "{{ server.key.inner }}"
 [service.servers.outer_key]
 data = "{{ server.key.outer }}"
 {% endfor %}
-{% else %}
-servers = []
 {% endif %}
 
 {% if openportal_service.config.clients is defined %}
@@ -38,8 +42,6 @@ data = "{{ client.key.inner }}"
 [service.clients.outer_key]
 data = "{{ client.key.outer }}"
 {% endfor %}
-{% else %}
-clients = []
 {% endif %}
 
 [extras]
@@ -47,4 +49,8 @@ clients = []
 {% for key, value in openportal_service.config.extras | items %}
 {{ key }} = "{{ value }}"
 {% endfor %}
+{% endif %}
+{% if openportal_service.config.custom is defined %}
+
+{{ openportal_service.config.custom }}
 {% endif %}
