@@ -50,3 +50,7 @@ data = "{{ client.key.outer }}"
 {{ key }} = "{{ value }}"
 {% endfor %}
 {% endif %}
+{% if openportal_service.config.custom is defined %}
+
+{{ openportal_service.config.custom }}
+{% endif %}

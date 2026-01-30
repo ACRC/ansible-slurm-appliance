@@ -128,4 +128,5 @@ openportal_services:
         freeipa-password: "{{ openportal_freeipa_password }}"
         instance-groups: "bc5@dl-clusters-bc5:bc5usrs"
         freeipa-server: "https://dl-auth.acrc.bris.ac.uk"
-
+      custom: |
+        [service.encryption.Simple]
