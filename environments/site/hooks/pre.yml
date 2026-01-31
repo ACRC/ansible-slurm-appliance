@@ -37,8 +37,16 @@
       ansible.builtin.copy:
         src: "{{ appliances_environment_root }}/../site/files/dl-auth.acrc.bris.ac.uk.cert"
         dest: "/etc/sssd/dl-auth.acrc.bris.ac.uk.cert"
-    - name: Set SSSD for sudo
+
+    - name: "Set SSSD for sudo: remove line"
       ansible.builtin.lineinfile:
+        state: absent
         path: /etc/nsswitch.conf
         regexp: '^sudoers:'
+    
+    - name: "Set SSSD for sudo: insert line"
+      ansible.builtin.lineinfile:
+        state: present
+        path: /etc/nsswitch.conf
+        insertafter: EOF
         line: "sudoers: files sss"
