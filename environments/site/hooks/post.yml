@@ -22,3 +22,17 @@
         mode: "u=rw,g=,o="
         owner: root
         group: root
+
+- name: motd
+  hosts: login
+  tags: motd
+  become: true
+  tasks:
+    - name: Install MOTD
+      ansible.builtin.copy:
+        src: "{{ appliances_environment_root }}/../site/files/motd"
+        dest: "/etc/motd"
+        force: true
+        mode: "u=rw,g=r,o=r"
+        owner: root
+        group: root
