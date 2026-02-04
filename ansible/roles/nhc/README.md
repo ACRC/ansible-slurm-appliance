@@ -34,9 +34,9 @@ When the `ansible/site.yml` playbook is run this will automatically:
 
 2. Template out node health check rules using Ansible facts for each compute
    node. Currently these check:
-
    - Filesystem mounts
    - Ethernet interfaces
+   - InfiniBand interfaces
 
    See `/etc/nhc/nhc.conf` on a compute node for the full configuration.
 

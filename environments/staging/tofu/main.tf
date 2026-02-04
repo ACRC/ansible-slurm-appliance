@@ -44,17 +44,17 @@ module "cluster" {
             "slurm-staging-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
     }
 
