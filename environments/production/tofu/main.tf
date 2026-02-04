@@ -1234,7 +1234,8 @@ module "cluster" {
          flavor: "gpu.v1.16cpu.128ram.a100"
          availability_zone = "DL-Rack-5"
          vnic_types = {
-           "slurm-production": "direct"
+           "slurm-production-control-net": "normal"
+           "slurm-production-rdma-net": "direct"
            "external-ceph": "direct"
          }
 #         ignore_image_changes: true
@@ -1258,7 +1259,8 @@ module "cluster" {
          flavor: "gpu.v1.16cpu.128ram.a100"
          availability_zone = "DL-Rack-5"
          vnic_types = {
-           "slurm-production": "direct"
+           "slurm-production-control-net": "normal"
+           "slurm-production-rdma-net": "direct"
            "external-ceph": "direct"
          }
 #         ignore_image_changes: true
@@ -1282,7 +1284,8 @@ module "cluster" {
          flavor: "mem.v1.56cpu.448ram"
          availability_zone = "DL-Rack-5"
          vnic_types = {
-           "slurm-production": "direct"
+           "slurm-production-control-net": "normal"
+           "slurm-production-rdma-net": "direct"
            "external-ceph": "direct"
          }
 #         ignore_image_changes: true
@@ -1306,7 +1309,8 @@ module "cluster" {
          flavor: "mem.v1.56cpu.448ram"
          availability_zone = "DL-Rack-5"
          vnic_types = {
-           "slurm-production": "direct"
+           "slurm-production-control-net": "normal"
+           "slurm-production-rdma-net": "direct"
            "external-ceph": "direct"
          }
 #         ignore_image_changes: true
