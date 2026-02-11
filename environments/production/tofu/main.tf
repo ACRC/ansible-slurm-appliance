@@ -479,14 +479,14 @@ module "cluster" {
       }
       general-gen2-compute17 = {
           nodes: [
-          #  "vcompute129", vf error
-          #  "vcompute130", vf error
+           "vcompute129",
+           "vcompute130",
            "vcompute131",
            "vcompute132",
            "vcompute133",
            "vcompute134",
            "vcompute135",
-          #  "vcompute136", vf error
+           "vcompute136",
            "vcompute137",
            "vcompute138",
            "vcompute139",
@@ -519,10 +519,10 @@ module "cluster" {
            "vcompute143",
            "vcompute144",
            "vcompute145",
-          #  "vcompute146", vf error
+           "vcompute146",
            "vcompute147",
            "vcompute148",
-          #  "vcompute149", vf error
+           "vcompute149",
            "vcompute150",
           ]
           hypervisor_hostname: "compute18"
@@ -554,7 +554,7 @@ module "cluster" {
            "vcompute155",
            "vcompute156",
            "vcompute157",
-          #  "vcompute158", not enough space, due to stuck vm rocky-ldap
+           # "vcompute158", not enough space, due to stuck vm rocky-ldap
            "vcompute159",
            "vcompute160",
            "vcompute161",
@@ -647,74 +647,75 @@ module "cluster" {
             "sssd",
           ]
       }
-      general-gen2-compute22 = {
-          nodes: [
-           "vcompute184",
-           "vcompute185",
-           "vcompute186",
-           "vcompute187",
-           "vcompute188",
-           "vcompute189",
-           "vcompute190",
-           "vcompute191",
-           "vcompute192",
-           "vcompute193",
-           "vcompute194",
-          ]
-          hypervisor_hostname: "compute22"
-          flavor: "hpc.v2.32cpu.128ram"
-          availability_zone = "DL-Rack-11"
-          vnic_types = {
-            "slurm-production-control-net": "normal"
-            "slurm-production-rdma-net": "direct"
-            "external-ceph": "direct"
-          }
-          ignore_image_changes: true
-          compute_init_enable = [
-            "compute",
-            "etc_hosts",
-            "tuned",
-            "nfs",
-            "manila",
-            "basic_users",
-            "eessi",
-            "sssd",
-          ]
-      }
-      general-gen2-compute23 = {
-          nodes: [
-           "vcompute195",
-           "vcompute196",
-           "vcompute197",
-           "vcompute198",
-           "vcompute199",
-           "vcompute200",
-           "vcompute201",
-           "vcompute202",
-           "vcompute203",
-           "vcompute204",
-           "vcompute205",
-          ]
-          hypervisor_hostname: "compute23"
-          flavor: "hpc.v2.32cpu.128ram"
-          availability_zone = "DL-Rack-11"
-          vnic_types = {
-            "slurm-production-control-net": "normal"
-            "slurm-production-rdma-net": "direct"
-            "external-ceph": "direct"
-          }
-          ignore_image_changes: true
-          compute_init_enable = [
-            "compute",
-            "etc_hosts",
-            "tuned",
-            "nfs",
-            "manila",
-            "basic_users",
-            "eessi",
-            "sssd",
-          ]
-      }
+# compute22, compute23 taken out for investigation of vf reuse issue (2026-02-11)
+#      general-gen2-compute22 = {
+#          nodes: [
+#           "vcompute184",
+#           "vcompute185",
+#           "vcompute186",
+#           "vcompute187",
+#           "vcompute188",
+#           "vcompute189",
+#           "vcompute190",
+#           "vcompute191",
+#           "vcompute192",
+#           "vcompute193",
+#           "vcompute194",
+#          ]
+#          hypervisor_hostname: "compute22"
+#          flavor: "hpc.v2.32cpu.128ram"
+#          availability_zone = "DL-Rack-11"
+#          vnic_types = {
+#            "slurm-production-control-net": "normal"
+#            "slurm-production-rdma-net": "direct"
+#            "external-ceph": "direct"
+#          }
+#          ignore_image_changes: true
+#          compute_init_enable = [
+#            "compute",
+#            "etc_hosts",
+#            "tuned",
+#            "nfs",
+#            "manila",
+#            "basic_users",
+#            "eessi",
+#            "sssd",
+#          ]
+#      }
+#      general-gen2-compute23 = {
+#          nodes: [
+#           "vcompute195",
+#           "vcompute196",
+#           "vcompute197",
+#           "vcompute198",
+#           "vcompute199",
+#           "vcompute200",
+#           "vcompute201",
+#           "vcompute202",
+#           "vcompute203",
+#           "vcompute204",
+#           "vcompute205",
+#          ]
+#          hypervisor_hostname: "compute23"
+#          flavor: "hpc.v2.32cpu.128ram"
+#          availability_zone = "DL-Rack-11"
+#          vnic_types = {
+#            "slurm-production-control-net": "normal"
+#            "slurm-production-rdma-net": "direct"
+#            "external-ceph": "direct"
+#          }
+#          ignore_image_changes: true
+#          compute_init_enable = [
+#            "compute",
+#            "etc_hosts",
+#            "tuned",
+#            "nfs",
+#            "manila",
+#            "basic_users",
+#            "eessi",
+#            "sssd",
+#          ]
+#      }
       general-gen2-compute24 = {
           nodes: [
            "vcompute206",
