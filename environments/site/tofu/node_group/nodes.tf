@@ -163,6 +163,7 @@ resource "openstack_compute_instance_v2" "compute" {
   image_id    = var.image_id
   flavor_name = var.flavor
   key_pair    = var.key_pair
+  hypervisor_hostname = var.hypervisor_hostname
 
   dynamic "block_device" {
     for_each = var.volume_backed_instances ? [1] : []
