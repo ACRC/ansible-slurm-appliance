@@ -44,17 +44,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
 	    "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-compute2 = {
           nodes: [
@@ -74,17 +74,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-compute3 = {
           nodes: [
@@ -104,17 +104,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-compute4 = {
           nodes: [
@@ -134,17 +134,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-compute5 = {
           nodes: [
@@ -164,17 +164,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-compute6 = {
           nodes: [
@@ -193,17 +193,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute9 = {
           nodes: [
@@ -227,17 +227,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute10 = {
           nodes: [
@@ -261,17 +261,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute11 = {
           nodes: [
@@ -295,17 +295,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute12 = {
           nodes: [
@@ -329,17 +329,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute13 = {
           nodes: [
@@ -363,52 +363,52 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
-#      general-gen2-compute14 = {
-#          nodes: [
-#           "vcompute096",
-#           "vcompute097",
-#           "vcompute098",
-#           "vcompute099",
-#           "vcompute100",
-#           "vcompute101",
-#           "vcompute102",
-#           "vcompute103",
-#           "vcompute104",
-#           "vcompute105",
-#           "vcompute106",
-#          ]
-#          hypervisor_hostname: "compute14"
-#          flavor: "hpc.v2.32cpu.128ram"
-#          availability_zone = "DL-Rack-6"
-#          vnic_types = {
-#            "slurm-production-control-net": "normal"
-#            "slurm-production-rdma-net": "direct"
-#            "external-ceph": "direct"
-#          }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
-#      }
+      general-gen2-compute14 = {
+          nodes: [
+           "vcompute096",
+           "vcompute097",
+           "vcompute098",
+           "vcompute099",
+           "vcompute100",
+           "vcompute101",
+           "vcompute102",
+           "vcompute103",
+           "vcompute104",
+           "vcompute105",
+           "vcompute106",
+          ]
+          hypervisor_hostname: "compute14"
+          flavor: "hpc.v2.32cpu.128ram"
+          availability_zone = "DL-Rack-6"
+          vnic_types = {
+            "slurm-production-control-net": "normal"
+            "slurm-production-rdma-net": "direct"
+            "external-ceph": "direct"
+          }
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
+      }
       general-gen2-compute15 = {
           nodes: [
            "vcompute107",
@@ -431,17 +431,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute16 = {
           nodes: [
@@ -465,28 +465,28 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute17 = {
           nodes: [
-          #  "vcompute129", vf error
-          #  "vcompute130", vf error
+           "vcompute129",
+           "vcompute130",
            "vcompute131",
            "vcompute132",
            "vcompute133",
            "vcompute134",
            "vcompute135",
-          #  "vcompute136", vf error
+           "vcompute136",
            "vcompute137",
            "vcompute138",
            "vcompute139",
@@ -499,17 +499,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute18 = {
           nodes: [
@@ -519,10 +519,10 @@ module "cluster" {
            "vcompute143",
            "vcompute144",
            "vcompute145",
-          #  "vcompute146", vf error
+           "vcompute146",
            "vcompute147",
            "vcompute148",
-          #  "vcompute149", vf error
+           "vcompute149",
            "vcompute150",
           ]
           hypervisor_hostname: "compute18"
@@ -533,17 +533,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute19 = {
           nodes: [
@@ -554,7 +554,7 @@ module "cluster" {
            "vcompute155",
            "vcompute156",
            "vcompute157",
-          #  "vcompute158", not enough space, due to stuck vm rocky-ldap
+           # "vcompute158", not enough space, due to stuck vm rocky-ldap
            "vcompute159",
            "vcompute160",
            "vcompute161",
@@ -567,17 +567,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute20 = {
           nodes: [
@@ -601,17 +601,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute21 = {
           nodes: [
@@ -635,40 +635,41 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
-      }
-      general-gen2-compute22 = {
-          nodes: [
-           "vcompute184",
-           "vcompute185",
-           "vcompute186",
-           "vcompute187",
-           "vcompute188",
-           "vcompute189",
-           "vcompute190",
-           "vcompute191",
-           "vcompute192",
-           "vcompute193",
-           "vcompute194",
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
           ]
-          hypervisor_hostname: "compute22"
-          flavor: "hpc.v2.32cpu.128ram"
-          availability_zone = "DL-Rack-11"
-          vnic_types = {
-            "slurm-production-control-net": "normal"
-            "slurm-production-rdma-net": "direct"
-            "external-ceph": "direct"
-          }
+      }
+# compute22, compute23 taken out for investigation of vf reuse issue (2026-02-11)
+#      general-gen2-compute22 = {
+#          nodes: [
+#           "vcompute184",
+#           "vcompute185",
+#           "vcompute186",
+#           "vcompute187",
+#           "vcompute188",
+#           "vcompute189",
+#           "vcompute190",
+#           "vcompute191",
+#           "vcompute192",
+#           "vcompute193",
+#           "vcompute194",
+#          ]
+#          hypervisor_hostname: "compute22"
+#          flavor: "hpc.v2.32cpu.128ram"
+#          availability_zone = "DL-Rack-11"
+#          vnic_types = {
+#            "slurm-production-control-net": "normal"
+#            "slurm-production-rdma-net": "direct"
+#            "external-ceph": "direct"
+#          }
 #          ignore_image_changes: true
 #          compute_init_enable = [
 #            "compute",
@@ -680,29 +681,29 @@ module "cluster" {
 #            "eessi",
 #            "sssd",
 #          ]
-      }
-      general-gen2-compute23 = {
-          nodes: [
-           "vcompute195",
-           "vcompute196",
-           "vcompute197",
-           "vcompute198",
-           "vcompute199",
-           "vcompute200",
-           "vcompute201",
-           "vcompute202",
-           "vcompute203",
-           "vcompute204",
-           "vcompute205",
-          ]
-          hypervisor_hostname: "compute23"
-          flavor: "hpc.v2.32cpu.128ram"
-          availability_zone = "DL-Rack-11"
-          vnic_types = {
-            "slurm-production-control-net": "normal"
-            "slurm-production-rdma-net": "direct"
-            "external-ceph": "direct"
-          }
+#      }
+#      general-gen2-compute23 = {
+#          nodes: [
+#           "vcompute195",
+#           "vcompute196",
+#           "vcompute197",
+#           "vcompute198",
+#           "vcompute199",
+#           "vcompute200",
+#           "vcompute201",
+#           "vcompute202",
+#           "vcompute203",
+#           "vcompute204",
+#           "vcompute205",
+#          ]
+#          hypervisor_hostname: "compute23"
+#          flavor: "hpc.v2.32cpu.128ram"
+#          availability_zone = "DL-Rack-11"
+#          vnic_types = {
+#            "slurm-production-control-net": "normal"
+#            "slurm-production-rdma-net": "direct"
+#            "external-ceph": "direct"
+#          }
 #          ignore_image_changes: true
 #          compute_init_enable = [
 #            "compute",
@@ -714,7 +715,7 @@ module "cluster" {
 #            "eessi",
 #            "sssd",
 #          ]
-      }
+#      }
       general-gen2-compute24 = {
           nodes: [
            "vcompute206",
@@ -737,17 +738,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute25 = {
           nodes: [
@@ -771,17 +772,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute26 = {
           nodes: [
@@ -805,17 +806,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute27 = {
           nodes: [
@@ -839,17 +840,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       # general-gen2-compute28 = {
       #     nodes: [
@@ -907,17 +908,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute30 = {
           nodes: [
@@ -941,17 +942,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute31 = {
           nodes: [
@@ -975,17 +976,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute32 = {
           nodes: [
@@ -1009,17 +1010,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute33 = {
           nodes: [
@@ -1043,17 +1044,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute34 = {
           nodes: [
@@ -1077,17 +1078,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute35 = {
           nodes: [
@@ -1111,17 +1112,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute36 = {
           nodes: [
@@ -1145,17 +1146,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute37 = {
           nodes: [
@@ -1179,17 +1180,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
       general-gen2-compute38 = {
           nodes: [
@@ -1213,17 +1214,17 @@ module "cluster" {
             "slurm-production-rdma-net": "direct"
             "external-ceph": "direct"
           }
-#          ignore_image_changes: true
-#          compute_init_enable = [
-#            "compute",
-#            "etc_hosts",
-#            "tuned",
-#            "nfs",
-#            "manila",
-#            "basic_users",
-#            "eessi",
-#            "sssd",
-#          ]
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
       }
      gpu-gpu1 = {
          nodes: [
@@ -1234,20 +1235,21 @@ module "cluster" {
          flavor: "gpu.v1.16cpu.128ram.a100"
          availability_zone = "DL-Rack-5"
          vnic_types = {
-           "slurm-production": "direct"
+           "slurm-production-control-net": "normal"
+           "slurm-production-rdma-net": "direct"
            "external-ceph": "direct"
          }
-#         ignore_image_changes: true
-#         compute_init_enable = [
-#           "compute",
-#           "etc_hosts",
-#           "tuned",
-#           "nfs",
-#           "manila",
-#           "basic_users",
-#           "eessi",
-#           "sssd",
-#         ]
+         ignore_image_changes: true
+         compute_init_enable = [
+           "compute",
+           "etc_hosts",
+           "tuned",
+           "nfs",
+           "manila",
+           "basic_users",
+           "eessi",
+           "sssd",
+         ]
      }
      gpu-gpu2 = {
          nodes: [
@@ -1258,20 +1260,21 @@ module "cluster" {
          flavor: "gpu.v1.16cpu.128ram.a100"
          availability_zone = "DL-Rack-5"
          vnic_types = {
-           "slurm-production": "direct"
+           "slurm-production-control-net": "normal"
+           "slurm-production-rdma-net": "direct"
            "external-ceph": "direct"
          }
-#         ignore_image_changes: true
-#         compute_init_enable = [
-#           "compute",
-#           "etc_hosts",
-#           "tuned",
-#           "nfs",
-#           "manila",
-#           "basic_users",
-#           "eessi",
-#           "sssd",
-#         ]
+         ignore_image_changes: true
+         compute_init_enable = [
+           "compute",
+           "etc_hosts",
+           "tuned",
+           "nfs",
+           "manila",
+           "basic_users",
+           "eessi",
+           "sssd",
+         ]
      }
      highmem-compute7 = {
          nodes: [
@@ -1282,20 +1285,21 @@ module "cluster" {
          flavor: "mem.v1.56cpu.448ram"
          availability_zone = "DL-Rack-5"
          vnic_types = {
-           "slurm-production": "direct"
+           "slurm-production-control-net": "normal"
+           "slurm-production-rdma-net": "direct"
            "external-ceph": "direct"
          }
-#         ignore_image_changes: true
-#         compute_init_enable = [
-#           "compute",
-#           "etc_hosts",
-#           "tuned",
-#           "nfs",
-#           "manila",
-#           "basic_users",
-#           "eessi",
-#           "sssd",
-#         ]
+         ignore_image_changes: true
+         compute_init_enable = [
+           "compute",
+           "etc_hosts",
+           "tuned",
+           "nfs",
+           "manila",
+           "basic_users",
+           "eessi",
+           "sssd",
+         ]
      }
      highmem-compute8 = {
          nodes: [
@@ -1306,20 +1310,21 @@ module "cluster" {
          flavor: "mem.v1.56cpu.448ram"
          availability_zone = "DL-Rack-5"
          vnic_types = {
-           "slurm-production": "direct"
+           "slurm-production-control-net": "normal"
+           "slurm-production-rdma-net": "direct"
            "external-ceph": "direct"
          }
-#         ignore_image_changes: true
-#         compute_init_enable = [
-#           "compute",
-#           "etc_hosts",
-#           "tuned",
-#           "nfs",
-#           "manila",
-#           "basic_users",
-#           "eessi",
-#           "sssd",
-#         ]
+         ignore_image_changes: true
+         compute_init_enable = [
+           "compute",
+           "etc_hosts",
+           "tuned",
+           "nfs",
+           "manila",
+           "basic_users",
+           "eessi",
+           "sssd",
+         ]
      }
     }
 
