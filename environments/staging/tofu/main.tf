@@ -26,19 +26,51 @@ module "cluster" {
       }
     ]
     compute = {
-      general-gen2-rack6 = {
+      general-compute23 = {
           nodes: [
 		"stagingcompute000",
 		"stagingcompute001",
-                #"stagingcompute002",
-                #"stagingcompute003",
-                #"stagingcompute004",
-                #"stagingcompute005",
-                #"stagingcompute006",
-                #"stagingcompute007",
+                "stagingcompute002",
+                "stagingcompute003",
+                "stagingcompute004",
+                "stagingcompute005",
+                "stagingcompute006",
+                "stagingcompute007",
+		"stagingcompute008",
 	  ]
           flavor: "hpc.v2.32cpu.128ram" # TODO: make this a 32cpu gen1 once there's space
-          availability_zone = "DL-Rack-6"
+          hypervisor_hostname = "compute23"
+          vnic_types = {
+            "slurm-staging-control-net": "normal"
+            "slurm-staging-rdma-net": "direct"
+            "external-ceph": "direct"
+          }
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
+      }
+      general-compute22 = {
+          nodes: [
+		"stagingcompute009",
+		"stagingcompute010",
+                "stagingcompute011",
+                "stagingcompute012",
+                "stagingcompute013",
+                "stagingcompute014",
+                "stagingcompute015",
+                "stagingcompute016",
+		"stagingcompute017",
+	  ]
+          flavor: "hpc.v2.32cpu.128ram" # TODO: make this a 32cpu gen1 once there's space
+          hypervisor_hostname = "compute22"
           vnic_types = {
             "slurm-staging-control-net": "normal"
             "slurm-staging-rdma-net": "direct"
@@ -62,7 +94,7 @@ module "cluster" {
         interactive = {
             nodes: ["staginglogin"]
             flavor: "hpc.v2.32cpu.128ram" # TODO: make this a 16cpu gen1 once there's space
-            availability_zone = "DL-Rack-6"
+            availability_zone = "DL-Rack-11"
             vnic_types = {
               "slurm-staging-control-net": "normal"
               "slurm-staging-rdma-net": "direct"
