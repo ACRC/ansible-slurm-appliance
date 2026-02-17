@@ -33,6 +33,7 @@ resource "openstack_networking_port_v2" "control" {
 
   binding {
     vnic_type = lookup(var.vnic_types, each.key, "normal")
+    profile = lookup(var.vnic_types, each.key, "normal") == "direct" ? "{\"capabilities\": [\"switchdev\"]}" : "{}"
   }
 
   lifecycle {
