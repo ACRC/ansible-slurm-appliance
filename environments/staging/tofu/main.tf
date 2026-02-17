@@ -40,11 +40,6 @@ module "cluster" {
 	  ]
           flavor: "hpc.v2.32cpu.128ram" # TODO: make this a 32cpu gen1 once there's space
           hypervisor_hostname = "compute23"
-          vnic_types = {
-            "slurm-staging-control-net": "normal"
-            "slurm-staging-rdma-net": "direct"
-            "external-ceph": "direct"
-          }
           ignore_image_changes: true
           compute_init_enable = [
             "compute",
@@ -71,11 +66,6 @@ module "cluster" {
 	  ]
           flavor: "hpc.v2.32cpu.128ram" # TODO: make this a 32cpu gen1 once there's space
           hypervisor_hostname = "compute22"
-          vnic_types = {
-            "slurm-staging-control-net": "normal"
-            "slurm-staging-rdma-net": "direct"
-            "external-ceph": "direct"
-          }
           ignore_image_changes: true
           compute_init_enable = [
             "compute",
@@ -95,11 +85,6 @@ module "cluster" {
             nodes: ["staginglogin"]
             flavor: "hpc.v2.32cpu.128ram" # TODO: make this a 16cpu gen1 once there's space
             availability_zone = "DL-Rack-11"
-            vnic_types = {
-              "slurm-staging-control-net": "normal"
-              "slurm-staging-rdma-net": "direct"
-              "external-ceph": "direct"
-            }
             root_volume_size = 100
             server_group_id = openstack_compute_servergroup_v2.control.id
             fip_addresses:  ["10.3.0.159"]
@@ -107,6 +92,11 @@ module "cluster" {
         }
     }
   
+    vnic_types = {
+      "slurm-staging-control-net": "normal"
+      "slurm-staging-rdma-net": "direct"
+      "external-ceph": "direct"
+    }
 
     control_server_group_id = openstack_compute_servergroup_v2.control.id
 
