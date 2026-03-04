@@ -1,12 +1,14 @@
 openhpc_partitions:
-    - name: general-gen2
+    - name: general
       nodegroups:
-        - general-gen2-rack6
+        - general-compute22
+        - general-compute23
       partition_params:
         DefaultTime: 15
     - name: rebuild
       nodegroups:
-        - general-gen2-rack6
+        - general-compute22
+        - general-compute23
       default: NO
       maxtime: 30
       partition_params:
