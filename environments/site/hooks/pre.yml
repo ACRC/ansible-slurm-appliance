@@ -54,3 +54,31 @@
       ansible.builtin.systemd_service:
         name: sshd
         state: restarted
+
+- name: Remove old tmpfs configuration
+  hosts: compute
+  tags: tmpfs
+  become: true
+  tasks:
+    - name: Disable tmp.mount service
+      ansible.builtin.systemd:
+        name: tmp.mount
+        enabled: false
+
+    - name: Ensure /tmp is not mounted under tmpfs
+      ansible.posix.mount:
+        path: "/tmp"
+        state: "absent"
+
+- name: Configure namespace/tmpfs plugin
+  hosts: control
+  tags: tmpfs
+  become: true
+  tasks:
+    - name: Ensure job_container.conf exists
+      ansible.builtin.template:
+        src: "job_container.conf.j2"
+        dest: "/etc/slurm/job_container.conf"
+        owner: root
+        group: root
+        mode: "0644"

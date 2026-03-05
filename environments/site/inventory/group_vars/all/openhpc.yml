@@ -6,5 +6,7 @@ openhpc_config_extra:
   AccountingStorageEnforce: 'associations,limits,qos,safe'
   SelectTypeParameters: CR_Core_Memory
   GresTypes: gpu
+  JobContainerType: job_container/tmpfs
+  PrologFlags: Contain
 
 openhpc_job_maxtime: '1-0'
