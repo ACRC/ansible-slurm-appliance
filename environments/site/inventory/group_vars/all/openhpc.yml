@@ -6,6 +6,7 @@ openhpc_config_extra:
   AccountingStorageEnforce: 'associations,limits,qos,safe'
   SelectTypeParameters: CR_Core_Memory
   GresTypes: gpu
+# NamespaceType: namespace/tmpfs  # Slurm >=25.11
   JobContainerType: job_container/tmpfs
   PrologFlags: Contain
 
