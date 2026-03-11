@@ -55,14 +55,6 @@ module "cluster" {
       general-compute22 = {
           nodes: [
 		"stagingcompute009",
-		"stagingcompute010",
-                "stagingcompute011",
-                "stagingcompute012",
-                "stagingcompute013",
-                "stagingcompute014",
-                "stagingcompute015",
-                "stagingcompute016",
-		"stagingcompute017",
 	  ]
           flavor: "hpc.v2.32cpu.128ram" # TODO: make this a 32cpu gen1 once there's space
           hypervisor_hostname = "compute22"
