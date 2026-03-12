@@ -1136,8 +1136,8 @@ module "cluster" {
     login = {
         interactive = {
             nodes: ["bc5-login01"]
-            flavor: "hpc.v1.16cpu.64ram"
-            hypervisor_hostname = "compute6"
+            flavor: "hpc.v2.32cpu.128ram" # TODO: make this a 16cpu gen1 once NUMA placement issue is resolved
+            hypervisor_hostname = "compute22"
             root_volume_size = 100
             server_group_id = openstack_compute_servergroup_v2.control.id
             fip_addresses:  ["10.3.0.89"]
@@ -1152,7 +1152,8 @@ module "cluster" {
     }
 
     control_server_group_id = openstack_compute_servergroup_v2.control.id
-    control_node_hypervisor_hostname = "compute6"
+    control_node_flavor = "hpc.v2.32cpu.128ram" # TODO: make this a 16cpu gen1 once NUMA placement issue is resolved
+    control_node_hypervisor_hostname = "compute22"
 
     environment_root = var.environment_root
 }
