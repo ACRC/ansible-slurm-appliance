@@ -35,3 +35,22 @@
         path: /etc/nsswitch.conf
         insertafter: EOF
         line: "sudoers: files sss"
+
+# TODO: Remove when upstream patch to sshd role is merged from 2.15
+- name: "Hotfix: Set MaxStartups to avoid throttling"
+  hosts: control
+  tags: sshd
+  become: true
+  tasks:
+    - name: Set MaxStartups
+      ansible.builtin.lineinfile:
+        state: present
+        path: /etc/ssh/sshd_config.d/11-ansible-maxstartups.conf
+        create: true
+        insertafter: EOF
+        line: "MaxStartups 100:30:200"
+
+    - name: Restart sshd service
+      ansible.builtin.systemd_service:
+        name: sshd
+        state: restarted

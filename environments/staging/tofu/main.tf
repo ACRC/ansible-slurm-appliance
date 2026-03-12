@@ -26,24 +26,38 @@ module "cluster" {
       }
     ]
     compute = {
-      general-gen2-rack6 = {
+      general-compute23 = {
           nodes: [
 		"stagingcompute000",
 		"stagingcompute001",
-                #"stagingcompute002",
-                #"stagingcompute003",
-                #"stagingcompute004",
-                #"stagingcompute005",
-                #"stagingcompute006",
-                #"stagingcompute007",
+                "stagingcompute002",
+                "stagingcompute003",
+                "stagingcompute004",
+                "stagingcompute005",
+                "stagingcompute006",
+                "stagingcompute007",
+		"stagingcompute008",
 	  ]
           flavor: "hpc.v2.32cpu.128ram" # TODO: make this a 32cpu gen1 once there's space
-          availability_zone = "DL-Rack-6"
-          vnic_types = {
-            "slurm-staging-control-net": "normal"
-            "slurm-staging-rdma-net": "direct"
-            "external-ceph": "direct"
-          }
+          hypervisor_hostname = "compute23"
+          ignore_image_changes: true
+          compute_init_enable = [
+            "compute",
+            "etc_hosts",
+            "tuned",
+            "nfs",
+            "manila",
+            "basic_users",
+            "eessi",
+            "sssd",
+          ]
+      }
+      general-compute22 = {
+          nodes: [
+		"stagingcompute009",
+	  ]
+          flavor: "hpc.v2.32cpu.128ram" # TODO: make this a 32cpu gen1 once there's space
+          hypervisor_hostname = "compute22"
           ignore_image_changes: true
           compute_init_enable = [
             "compute",
@@ -62,12 +76,7 @@ module "cluster" {
         interactive = {
             nodes: ["staginglogin"]
             flavor: "hpc.v2.32cpu.128ram" # TODO: make this a 16cpu gen1 once there's space
-            availability_zone = "DL-Rack-6"
-            vnic_types = {
-              "slurm-staging-control-net": "normal"
-              "slurm-staging-rdma-net": "direct"
-              "external-ceph": "direct"
-            }
+            availability_zone = "DL-Rack-11"
             root_volume_size = 100
             server_group_id = openstack_compute_servergroup_v2.control.id
             fip_addresses:  ["10.3.0.159"]
@@ -75,6 +84,11 @@ module "cluster" {
         }
     }
   
+    vnic_types = {
+      "slurm-staging-control-net": "normal"
+      "slurm-staging-rdma-net": "direct"
+      "external-ceph": "direct"
+    }
 
     control_server_group_id = openstack_compute_servergroup_v2.control.id
 
