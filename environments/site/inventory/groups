@@ -223,6 +223,7 @@ fatimage
 [mounts:children]
 # Hosts with custom mounts
 login
+compute
 
 [openportal:children]
 login
