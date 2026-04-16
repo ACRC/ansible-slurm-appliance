@@ -54,3 +54,27 @@
       ansible.builtin.systemd_service:
         name: sshd
         state: restarted
+
+- name: "Mount data volumes"
+  hosts: compute
+  tags: data-volumes
+  become: true
+  tasks:
+    - name: "Check if data volume is present"
+      ansible.builtin.stat:
+        path: /dev/disk/by-path/pci-0000:09:00.0
+      register: data_vol_stat
+
+    - name: "Create filesystem on data volume"
+      community.general.filesystem:
+        fstype: ext4
+        dev: /dev/disk/by-path/pci-0000:09:00.0
+      when: data_vol_stat.stat.exists
+
+    - name: "Mount filesystem"
+      ansible.posix.mount:
+        path: /data
+        src: /dev/disk/by-path/pci-0000:09:00.0
+        state: mounted
+        fstype: ext4
+      when: data_vol_stat.stat.exists
