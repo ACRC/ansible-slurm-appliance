@@ -55,21 +55,6 @@
         name: sshd
         state: restarted
 
-- name: Remove old tmpfs configuration
-  hosts: compute
-  tags: tmpfs
-  become: true
-  tasks:
-    - name: Disable tmp.mount service
-      ansible.builtin.systemd:
-        name: tmp.mount
-        enabled: false
-
-    - name: Ensure /tmp is not mounted under tmpfs
-      ansible.posix.mount:
-        path: "/tmp"
-        state: "absent"
-
 - name: Configure namespace/tmpfs plugin
   hosts: control
   tags: tmpfs
