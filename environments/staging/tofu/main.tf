@@ -41,6 +41,9 @@ module "cluster" {
           flavor: "hpc.v2.32cpu.128ram" # TODO: make this a 32cpu gen1 once there's space
           hypervisor_hostname = "compute23"
           ignore_image_changes: true
+          extra_volumes = {
+            "vol-data" = {size = 500, volume_type = "iops"},
+          }
           compute_init_enable = [
             "compute",
             "etc_hosts",
