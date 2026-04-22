@@ -30,13 +30,13 @@ module "cluster" {
           nodes: [
 		"stagingcompute000",
 		"stagingcompute001",
-                "stagingcompute002",
-                "stagingcompute003",
-                "stagingcompute004",
-                "stagingcompute005",
-                "stagingcompute006",
-                "stagingcompute007",
-		"stagingcompute008",
+                #"stagingcompute002",
+                #"stagingcompute003",
+                #"stagingcompute004",
+                #"stagingcompute005",
+                #"stagingcompute006",
+                #"stagingcompute007",
+		#"stagingcompute008",
 	  ]
           flavor: "hpc.v2.32cpu.128ram" # TODO: make this a 32cpu gen1 once there's space
           hypervisor_hostname = "compute23"
@@ -52,24 +52,24 @@ module "cluster" {
             "sssd",
           ]
       }
-      general-compute22 = {
-          nodes: [
-		"stagingcompute009",
-	  ]
-          flavor: "hpc.v2.32cpu.128ram" # TODO: make this a 32cpu gen1 once there's space
-          hypervisor_hostname = "compute22"
-          ignore_image_changes: true
-          compute_init_enable = [
-            "compute",
-            "etc_hosts",
-            "tuned",
-            "nfs",
-            "manila",
-            "basic_users",
-            "eessi",
-            "sssd",
-          ]
-      }
+      #general-compute22 = {
+      #    nodes: [
+      #  	"stagingcompute009",
+      #    ]
+      #    flavor: "hpc.v2.32cpu.128ram" # TODO: make this a 32cpu gen1 once there's space
+      #    hypervisor_hostname = "compute22"
+      #    ignore_image_changes: true
+      #    compute_init_enable = [
+      #      "compute",
+      #      "etc_hosts",
+      #      "tuned",
+      #      "nfs",
+      #      "manila",
+      #      "basic_users",
+      #      "eessi",
+      #      "sssd",
+      #    ]
+      #}
     }
 
     login = {

@@ -1,13 +1,13 @@
 openhpc_partitions:
     - name: general
       nodegroups:
-        - general-compute22
+        #- general-compute22
         - general-compute23
       partition_params:
         DefaultTime: 15
     - name: rebuild
       nodegroups:
-        - general-compute22
+        #- general-compute22
         - general-compute23
       default: NO
       maxtime: 30
