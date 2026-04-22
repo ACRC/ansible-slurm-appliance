@@ -55,6 +55,17 @@
         name: sshd
         state: restarted
 
+- name: Ensure namespace/tmpfs base path is created
+  hosts: compute
+  tags: tmpfs
+  become: true
+  tasks:
+    - name: Create namespace/tmpfs base bath on compute nodes
+      ansible.builtin.file:
+        path: "{{ tmpfs_base_path }}"
+        state: directory
+        mode: "0700"
+
 - name: Configure namespace/tmpfs plugin
   hosts: control
   tags: tmpfs
