@@ -54,3 +54,27 @@
       ansible.builtin.systemd_service:
         name: sshd
         state: restarted
+
+- name: Ensure namespace/tmpfs base path is created
+  hosts: compute
+  tags: tmpfs
+  become: true
+  tasks:
+    - name: Create namespace/tmpfs base bath on compute nodes
+      ansible.builtin.file:
+        path: "{{ tmpfs_base_path }}"
+        state: directory
+        mode: "0700"
+
+- name: Configure namespace/tmpfs plugin
+  hosts: control
+  tags: tmpfs
+  become: true
+  tasks:
+    - name: Ensure job_container.conf exists
+      ansible.builtin.template:
+        src: "job_container.conf.j2"
+        dest: "/etc/slurm/job_container.conf"
+        owner: root
+        group: root
+        mode: "0644"

@@ -1,0 +1,10 @@
+---
+mounts_overrides: "{{ compute_mounts if 'compute' in group_names else {} }}" 
+compute_mounts:
+  namespace-tmpfs:
+    path: /namespace-tmpfs
+    src: tmpfs
+    fstype: tmpfs
+    state: mounted
+    opts: "{{ mounts_tmp_opts }}"
+    enabled: "{{ mounts_tmp_enabled }}"
