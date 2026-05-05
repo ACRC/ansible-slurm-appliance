@@ -9,9 +9,9 @@
       vars:
         timezone: "{{ cluster_timezone }}"
 
-- name: sshd config
+- name: sshd config for user access
   hosts: sshd
-  tags: sshd
+  tags: user-access
   become: true
   tasks:
     - name: Install SSH public CA key
