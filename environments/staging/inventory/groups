@@ -115,6 +115,10 @@ cluster
 [extra_packages:children]
 # Hosts to install specified additional packages on
 builder
+# Uncomment cluster group to allow packages to be installed outside of image build
+# NOTE: You also need to uncomment the line setting dnf_repos_allow_insecure_creds
+#   to true in environments/staging/inventory/group_vars/all/defaults.yml
+#cluster
 
 [cacerts]
 # Hosts to configure CA certificates and trusts on

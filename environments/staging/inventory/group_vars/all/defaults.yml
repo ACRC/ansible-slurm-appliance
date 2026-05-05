@@ -1,0 +1,6 @@
+# Uncomment to allow Ark credentials to be used outside of build context
+# This is useful to test installing new packages without needing to create
+# a new image
+# NOTE: You also need to uncomment the line adding group cluster as a child
+#   of group extra_packages in environments/staging/inventory/groups
+#dnf_repos_allow_insecure_creds: true
