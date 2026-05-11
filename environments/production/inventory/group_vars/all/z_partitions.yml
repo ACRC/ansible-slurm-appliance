@@ -15,9 +15,9 @@ openhpc_partitions:
         - general-gen2-compute11
         - general-gen2-compute12
         - general-gen2-compute13
-        # - general-gen2-compute14
+        - general-gen2-compute14
         - general-gen2-compute15
-        - general-gen2-compute16
+        # - general-gen2-compute16
         - general-gen2-compute17
         - general-gen2-compute18
         - general-gen2-compute19
@@ -71,7 +71,7 @@ openhpc_partitions:
         - general-gen2-compute11
         - general-gen2-compute12
         - general-gen2-compute13
-        # - general-gen2-compute14
+        - general-gen2-compute14
         - general-gen2-compute15
         - general-gen2-compute16
         - general-gen2-compute17
