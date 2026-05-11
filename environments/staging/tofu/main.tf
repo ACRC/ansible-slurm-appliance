@@ -50,6 +50,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+	    "mounts",
           ]
       }
       #general-compute22 = {
@@ -68,6 +69,7 @@ module "cluster" {
       #      "basic_users",
       #      "eessi",
       #      "sssd",
+      #      "mounts",
       #    ]
       #}
     }
