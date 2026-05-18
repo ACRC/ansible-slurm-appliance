@@ -1,0 +1,56 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    # Copy Fail
+    - name: Extract kernel args for default kernel
+      ansible.builtin.command:
+        cmd: "bash -c 'grubby --info=DEFAULT | grep -E \"^args=\"'"
+      register: copy_fail_test_out
+
+    - name: Assert presence of expected blacklisted modules
+      ansible.builtin.assert:
+        that: copy_fail_test_out.stdout is search('initcall_blacklist=af_alg_init,algif_hash_init,algif_skcipher_init,algif_aead_init,rng_init')
+
+    # Dirty Frag
+    - name: Read file contents for /etc/modprobe.d/dirtyfrag.conf
+      ansible.builtin.slurp:
+        path: /etc/modprobe.d/dirtyfrag.conf
+      register: dirty_frag_file_contents
+
+    - name: Assert contents of file are as expected
+      ansible.builtin.assert:
+        that: (dirty_frag_file_contents.content | b64decode) == expected_content
+      vars:
+        expected_content: |
+          install esp4 /bin/false
+          install esp6 /bin/false
+          install rxrpc /bin/false
+
+    - name: Get loaded modules
+      ansible.builtin.command:
+        cmd: "bash -c 'lsmod'"
+      register: dirty_frag_lsmod
+
+    - name: Assert vulnerable modules are not loaded
+      ansible.builtin.assert:
+        that: dirty_frag_lsmod is not search('esp4|esp6|rxrpc')
+
+    # ssh-keysign-pwn
+    - name: Get current ptrace_scope value
+      ansible.builtin.slurp:
+        src: /proc/sys/kernel/yama/ptrace_scope
+      register: ssh_keysign_pwn_ptrace_scope
+
+    - name: Validate value of ptrace_scope
+      ansible.builtin.assert:
+        that: (ssh_keysign_pwn_ptrace_scope.content | b64decode | int) == 2
+
+    - name: Read file contents for /etc/sysctl.d/99-prevent-ptrace_scope.conf
+      ansible.builtin.slurp:
+        path: /etc/sysctl.d/99-prevent-ptrace_scope.conf
+      register: ssh_keysign_pwn_ptrace_scope_contents
+
+    - name: Assert contents of file are as expected
+      ansible.builtin.assert:
+        that: (ssh_keysign_pwn_ptrace_scope_contents.content | b64decode) is search('^kernel\.yama\.ptrace_scope=2$', multiline=true)

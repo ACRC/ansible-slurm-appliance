@@ -1,0 +1,40 @@
+---
+# -- Initial mitigation applied before StackHPC advisory -----------------------
+# # Apply mitigation for https://github.com/0xdeadbeefnetwork/ssh-keysign-pwn to 
+# all hosts
+#- hosts: cluster
+#  become: true
+#  tasks:
+#    - name: Remote setuid bit from chage binary
+#      ansible.builtin.file:
+#        path: /usr/bin/chage
+#        mode: u-s
+# ------------------------------------------------------------------------------
+
+# -- StackHPC recommended mitigation: 2026-05-17 -------------------------------
+- hosts: all
+  become: true
+  gather_facts: false
+  tasks:
+    - name: Apply ssh-keysign-pwn mitigation to live system
+      ansible.builtin.command: sysctl kernel.yama.ptrace_scope=2
+    - name: Get current ptrace_scope value
+      ansible.builtin.slurp:
+        src: /proc/sys/kernel/yama/ptrace_scope
+      check_mode: false
+      changed_when: false
+      register: ptrace_scope
+    - name: Show ptrace_scope
+      ansible.builtin.debug:
+        msg: "/proc/sys/kernel/yama/ptrace_scope={{ ptrace_scope.content|b64decode }}"
+    - name: Prepare sysctl.d file to apply mitigation upon reboot
+      ansible.builtin.copy:
+        dest: /etc/sysctl.d/99-prevent-ptrace_scope.conf
+        content: |
+          # this is a mitigation for ssh-keysign-pwn
+          # See https://seclists.org/oss-sec/2026/q2/529 for the announcement
+          kernel.yama.ptrace_scope=2
+        owner: root
+        group: root
+        mode: "0644"
+# ------------------------------------------------------------------------------

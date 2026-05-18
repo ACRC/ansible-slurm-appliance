@@ -1,0 +1,19 @@
+---
+# Enable user access after severing by enabling trust of the Conch SSH CA key
+- hosts: login
+  become: true
+  tasks:
+    # Enable bc5usrs login
+    - name: Disable login by bc5usrs
+      ansible.builtin.lineinfile:
+        path: "/etc/ssh/sshd_config.d/10-ansible.conf"
+        state: present
+        backrefs: true
+        regexp: '^#(\s*TrustedUserCAKeys /etc/ssh/conch_ssh_ca\.key)'
+        line: '\1'
+
+    - name: Restart sshd service
+      ansible.builtin.systemd_service:
+        name: sshd
+        state: restarted
+

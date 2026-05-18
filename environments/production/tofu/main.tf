@@ -37,7 +37,7 @@ module "cluster" {
            "vcompute006",
           ]
           hypervisor_hostname: "compute1"
-          flavor: "hpc.v1.32cpu.128ram"
+          flavor: "experimental-1numa"
           availability_zone = "DL-Rack-5"
           ignore_image_changes: true
           compute_init_enable = [
@@ -49,6 +49,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-compute2 = {
@@ -74,6 +75,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-compute3 = {
@@ -99,6 +101,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-compute4 = {
@@ -112,7 +115,7 @@ module "cluster" {
            "vcompute027",
           ]
           hypervisor_hostname: "compute4"
-          flavor: "hpc.v1.32cpu.128ram"
+          flavor: "experimental-1numa"
           availability_zone = "DL-Rack-5"
           ignore_image_changes: true
           compute_init_enable = [
@@ -124,6 +127,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-compute5 = {
@@ -149,6 +153,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-compute6 = {
@@ -173,6 +178,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute9 = {
@@ -202,6 +208,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute10 = {
@@ -231,6 +238,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute11 = {
@@ -260,6 +268,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute12 = {
@@ -289,6 +298,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute13 = {
@@ -318,6 +328,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute14 = {
@@ -347,6 +358,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute15 = {
@@ -376,37 +388,39 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
-      general-gen2-compute16 = {
-          nodes: [
-           "vcompute118",
-           "vcompute119",
-           "vcompute120",
-           "vcompute121",
-           "vcompute122",
-           "vcompute123",
-           "vcompute124",
-           "vcompute125",
-           "vcompute126",
-           "vcompute127",
-           "vcompute128",
-          ]
-          hypervisor_hostname: "compute16"
-          flavor: "hpc.v2.32cpu.128ram"
-          availability_zone = "DL-Rack-6"
-          ignore_image_changes: true
-          compute_init_enable = [
-            "compute",
-            "etc_hosts",
-            "tuned",
-            "nfs",
-            "manila",
-            "basic_users",
-            "eessi",
-            "sssd",
-          ]
-      }
+      #general-gen2-compute16 = {
+      #    nodes: [
+      #     "vcompute118",
+      #     "vcompute119",
+      #     "vcompute120",
+      #     "vcompute121",
+      #     "vcompute122",
+      #     "vcompute123",
+      #     "vcompute124",
+      #     "vcompute125",
+      #     "vcompute126",
+      #     "vcompute127",
+      #     "vcompute128",
+      #    ]
+      #    hypervisor_hostname: "compute16"
+      #    flavor: "hpc.v2.32cpu.128ram"
+      #    availability_zone = "DL-Rack-6"
+      #    ignore_image_changes: true
+      #    compute_init_enable = [
+      #      "compute",
+      #      "etc_hosts",
+      #      "tuned",
+      #      "nfs",
+      #      "manila",
+      #      "basic_users",
+      #      "eessi",
+      #      "sssd",
+      #      "mounts",
+      #    ]
+      #}
       general-gen2-compute17 = {
           nodes: [
            "vcompute129",
@@ -434,6 +448,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute18 = {
@@ -463,6 +478,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute19 = {
@@ -492,6 +508,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute20 = {
@@ -521,6 +538,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute21 = {
@@ -550,6 +568,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
 # compute22, compute23 taken out for investigation of vf reuse issue (2026-02-11)
@@ -580,6 +599,7 @@ module "cluster" {
 #            "basic_users",
 #            "eessi",
 #            "sssd",
+#            "mounts",
 #          ]
 #      }
 #      general-gen2-compute23 = {
@@ -609,6 +629,7 @@ module "cluster" {
 #            "basic_users",
 #            "eessi",
 #            "sssd",
+#            "mounts",
 #          ]
 #      }
       general-gen2-compute24 = {
@@ -638,6 +659,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute25 = {
@@ -667,6 +689,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute26 = {
@@ -696,6 +719,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute27 = {
@@ -725,6 +749,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       # general-gen2-compute28 = {
@@ -754,6 +779,7 @@ module "cluster" {
       #       "basic_users",
       #       "eessi",
       #       "sssd",
+      #       "mounts",
       #     ]
       # }
       general-gen2-compute29 = {
@@ -783,6 +809,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute30 = {
@@ -812,6 +839,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute31 = {
@@ -841,6 +869,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute32 = {
@@ -870,6 +899,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute33 = {
@@ -899,6 +929,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute34 = {
@@ -928,6 +959,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute35 = {
@@ -957,6 +989,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute36 = {
@@ -986,6 +1019,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute37 = {
@@ -1015,6 +1049,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
       general-gen2-compute38 = {
@@ -1044,6 +1079,7 @@ module "cluster" {
             "basic_users",
             "eessi",
             "sssd",
+            "mounts",
           ]
       }
      gpu-gpu1 = {
@@ -1064,6 +1100,7 @@ module "cluster" {
            "basic_users",
            "eessi",
            "sssd",
+           "mounts",
          ]
      }
      gpu-gpu2 = {
@@ -1084,6 +1121,7 @@ module "cluster" {
            "basic_users",
            "eessi",
            "sssd",
+           "mounts",
          ]
      }
      highmem-compute7 = {
@@ -1104,6 +1142,7 @@ module "cluster" {
            "basic_users",
            "eessi",
            "sssd",
+           "mounts",
          ]
      }
      highmem-compute8 = {
@@ -1129,6 +1168,7 @@ module "cluster" {
            "basic_users",
            "eessi",
            "sssd",
+           "mounts",
          ]
      }
     }
@@ -1136,8 +1176,8 @@ module "cluster" {
     login = {
         interactive = {
             nodes: ["bc5-login01"]
-            flavor: "hpc.v2.32cpu.128ram" # TODO: make this a 16cpu gen1 once NUMA placement issue is resolved
-            hypervisor_hostname = "compute22"
+            flavor: "hpc.v1.16cpu.64ram"
+            hypervisor_hostname = "compute6"
             root_volume_size = 100
             server_group_id = openstack_compute_servergroup_v2.control.id
             fip_addresses:  ["10.3.0.89"]
@@ -1152,7 +1192,7 @@ module "cluster" {
     }
 
     control_server_group_id = openstack_compute_servergroup_v2.control.id
-    control_node_flavor = "hpc.v2.32cpu.128ram" # TODO: make this a 16cpu gen1 once NUMA placement issue is resolved
+    control_node_flavor = "hpc.v2.32cpu.128ram"
     control_node_hypervisor_hostname = "compute22"
 
     environment_root = var.environment_root
